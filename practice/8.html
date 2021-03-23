@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第八个练习</title>
+</head>
+<body>
+<div id="app">
+    {{ count }}<br>
+    <input type="button" value="改变count" @click="change_count(60)">
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            count: 30,
+        },
+        methods: {
+            change_count(num) {
+                this.count = num;
+            },
+        },
+    })
+</script>
+</body>
+</html>

@@ -2,25 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>第一个练习</title>
+    <title>第四个练习</title>
 </head>
 <body>
 <div id="app">
-    {{message}}
+    <span>{{message}},666666</span>
     <hr>
-    name: {{name}}
-    <hr>
-    age: {{age}}
+    <span v-text="message">asdjkasdklasjd</span>
 </div>
 <script src="../js/vue.min.js"></script>
 <script>
     new Vue({
         el: '#app',
         data: {
-            message: 'Hello Vue!',
-            name: 'ChengGuang',
-            age: 22,
-        }
+            message: '一起学习Vue~',
+        },
     })
 </script>
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第二个练习</title>
+</head>
+<body>
+<div id="app">
+    {{message}}<br>
+    年龄：{{age * 2}}<br>
+    姓名：{{user.username}}, 密码：{{user.password}}<br>
+    {{arr[0]}}<br>
+    {{user_list[0].username}}<br>
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: '要坚持学习啊！',
+            age: 22,
+            user: {'username': '小保', password: '123456'},
+            arr: ['贵州', '天津', '北京'],
+            user_list: [{'username': '小保', password: '123456'},
+                {'username': '小保', password: '123456'},
+                {'username': '小保', password: '123456'}
+            ],
+        },
+    })
+</script>
+</body>
+</html>

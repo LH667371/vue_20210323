@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第六个练习</title>
+</head>
+<body>
+<div id="app">
+    {{age}}<br>
+<!--    <input type="button" value="点击我变年轻" v-on:click="to_youth">-->
+    <input type="button" value="点击我变年轻" @click="to_youth">
+    <input type="button" value="点击我变回去" @click="to_old">
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            age: 60,
+        },
+        methods: {
+            to_youth(){
+                this.age = 18;
+            },
+            to_old(){
+                this.age = 60;
+            },
+        },
+    })
+</script>
+</body>
+</html>

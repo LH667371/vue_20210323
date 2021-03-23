@@ -2,25 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>第一个练习</title>
+    <title>第五个练习</title>
 </head>
 <body>
 <div id="app">
-    {{message}}
-    <hr>
-    name: {{name}}
-    <hr>
-    age: {{age}}
+    {{url}}<br>
+    <span v-text="url"></span><br>
+    <span v-html="url"></span>
 </div>
 <script src="../js/vue.min.js"></script>
 <script>
     new Vue({
         el: '#app',
         data: {
-            message: 'Hello Vue!',
-            name: 'ChengGuang',
-            age: 22,
-        }
+            url: '<a href="https://www.baidu.com">百度一下，你都知道！</a>',
+        },
     })
 </script>
 </body>
