@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第十五个练习</title>
+</head>
+<body>
+<div id="app">
+    <p @click="low_num">{{num}}</p>
+    <p>十位：{{parseInt(String(num)[String(Math.floor(num)).length-2])}}</p>
+    <p>个位：{{Math.floor(num) % 10}}</p>
+    <hr>
+
+    十位：<input type="text" v-model="shi">
+    个位：<input type="text" v-model="ge"><br>
+    结果：{{ result }}
+
+</div>
+<script src="../js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            num: 1129.123144,
+            shi: "",
+            ge: "",
+        },
+        methods: {
+            low_num() {
+                this.num -= 3;
+            },
+        },
+        computed: {
+            result() {
+                if (this.ge === '' && this.shi === '')
+                    return ''
+                return this.shi * 10 + +this.ge;
+            },
+        },
+    })
+</script>
+</body>
+</html>
